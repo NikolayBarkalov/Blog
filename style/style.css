@@ -1,0 +1,79 @@
+:root {
+    box-sizing: border-box;
+  }
+  
+  *,
+  ::before,
+  ::after {
+    box-sizing: inherit;
+  }
+
+  body {
+    font-family: ;
+    font-size: 1rem;
+    /* background-image: radial-gradient(circle at 1px 1px, black 1px, transparent 0); */
+    background-size: 10px 10px;
+}
+
+/* .grid-container {
+    height:100vh;
+    display: grid;
+    grid-template-areas: "header"
+                         "."
+                         "menu"
+                         "."
+                         "content"
+                         "."
+                         "sidebar"
+                         "."
+                         "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 5px 80px 5px 1fr 5px 80px 5px 80px;
+} */
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "menu  content aside"
+    "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 1.5em;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.header {
+    grid-area: header;
+    background-color: #bbb;
+}
+
+.content {
+    grid-area: content;
+    background-color: #bbb;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: #bbb;
+}
+
+.aside {
+    grid-area: aside;
+    background-color: #bbb;
+}
+
+
+.footer {
+    grid-area: footer;
+    background-color: #bbb;
+}
+
+
+
+h3{ 
+    text-align:center;
+}
