@@ -144,12 +144,9 @@ h3{
 }
 
 .nav__link:active {
-    background-color: var(--red);
+    background-color: var(--black);
 }
 
-.nav__link:focus {
-    background-color: var(--red);
-}
 
 .open--item::after {
     content: "\21B4";
