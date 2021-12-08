@@ -2,6 +2,15 @@
     box-sizing: border-box;
   }
   
+:root {
+    --c-blue-500: #2ab3c0;
+    --c-yellow-500: #f9bc73;
+    --blue: #7cd4d4;
+    --white: #fafafa;
+    --black: #000000;
+    --red: #ff0000;
+}
+
   *,
   ::before,
   ::after {
@@ -9,27 +18,13 @@
   }
 
   body {
-    font-family: ;
-    font-size: 1rem;
-    /* background-image: radial-gradient(circle at 1px 1px, black 1px, transparent 0); */
-    background-size: 10px 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem; 
+    background-image: radial-gradient(circle at 1px 1px, black 1px, transparent 0);
+     background-size: 10px 10px; 
+     background-color: var(--white);
 }
 
-/* .grid-container {
-    height:100vh;
-    display: grid;
-    grid-template-areas: "header"
-                         "."
-                         "menu"
-                         "."
-                         "content"
-                         "."
-                         "sidebar"
-                         "."
-                         "footer";
-    grid-template-columns: 1fr;
-    grid-template-rows: 80px 5px 80px 5px 1fr 5px 80px 5px 80px;
-} */
 
     .grid-container {
         display: grid;
@@ -42,6 +37,8 @@
         grid-gap: 1.5em;
         max-width: 100%;
         margin: 0 auto;
+        margin-top: -8px;
+        margin-left: -8px;
     }
 
 
@@ -61,11 +58,10 @@
     grid-gap: 0;
     max-width: 100%;
     margin: 0 auto;
+    margin-top: -8px;
 }
 
 }
-
-
 
 .header {
     grid-area: header;
@@ -79,7 +75,6 @@
 
 .menu {
     grid-area: menu;
-    background-color: #bbb;
 }
 
 .aside {
@@ -99,3 +94,77 @@ h3{
     text-align:center;
 }
 
+/* HEADER START */
+
+
+
+/* HEADER END */
+
+
+
+/* Start menu */
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border: 2px solid black;
+    padding: 0;
+    margin-left: 30px;
+    background-color: var(--white);
+}
+
+.nav__item {
+    list-style-type: none;
+    color: var(--black);
+}
+
+.nav__link {
+    position: sticky;
+    display: block;
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 3em;
+    color: var(--black);
+    background-color: var(--white);
+    border: 2px solid black;
+    font-weight: 700;
+}
+
+@media  (max-width: 468px) {
+    .nav__list {
+        margin: 0 auto;
+    }
+}
+
+
+.nav__link:hover {
+    background-color: var(--black);
+    color: var(--white);       
+}
+
+.nav__link:active {
+    background-color: var(--red);
+}
+
+.nav__link:focus {
+    background-color: var(--red);
+}
+
+.open--item::after {
+    content: "\21B4";
+}
+
+.open--link::after {
+    content: "\279E";
+}
+
+.nav--hiden {
+    display: none;
+    text-align: center;
+}
+
+.is-open > .nav--hiden {
+    display: block;
+}
+/* END MENU STYLESHEET */
